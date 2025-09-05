@@ -20,6 +20,7 @@ body {
   justify-content: space-between;
 }
 /* #endregion */
+
 /* #region top-bar */
 .top-bar {
   display: flex;
@@ -34,6 +35,8 @@ body {
   display: flex;
 }
 /* #endregion */
+
+/* #region icons */
 .icon {
   display: block;
   height: 24px;
@@ -42,6 +45,8 @@ body {
 .icon__close {
   background-image: url(./images/icons/icon-close.png);
 }
+/* #endregion */
+
 /* #region menu */
 .menu {
   box-sizing: border-box;
@@ -63,6 +68,7 @@ body {
   padding-inline: 120px;
 }
 /* #endregion */
+
 /* #region link/list */
 .nav__link {
   color: #292929;
