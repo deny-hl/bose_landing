@@ -15,14 +15,19 @@
 <body id="home">
   <header class="header">
     <div class="header__top">
-      <img src="./images/logo.png" alt="Bose logo">
-      <img src="./images/icons/burger-menu.png" alt="burger menu icon">
+      <a href="">
+        <img class="logo" src="./images/logo.png" alt="Bose logo">
+      </a>
+      <a href="#menu">
+        <img src="./images/icons/burger-menu.png" alt="burger menu icon">
+      </a>
+      
     </div>
 
     <div class="header__bottom">
       <img src="./images/sound-waves.png" alt="Sound waves">
 
-      <h1>
+      <h1 class="header__title">
         The world shades.
         <br>
         Your music shines.
@@ -33,7 +38,7 @@
   <aside class="menu" id="menu">
     <div class="top-bar">
       <a href="#" class="top-bar__logo">
-        <img src="./images/logo.png" alt="BOSE logo">
+        <img class="logo" src="./images/logo.png" alt="BOSE logo">
       </a>
 
       <a href="#" class="icon icon__close"></a>
@@ -58,9 +63,11 @@
       </nav>
     </div>
   </aside>
-  <main>
+
+  <main class="main">
     <section class="recommended" id="recommended">
-      <h2 class="recommended__header">Recommended</h2>
+      <h2 class="recommended__title">Recommended</h2>
+
       <div class="recommended__container>
         <div class="recommended__item">
           <img class="item__img" src="" alt="portable speaker">
@@ -81,7 +88,7 @@
     </section>
 
     <section class="categories" id="categories">
-      <h2 class="categories__header">
+      <h2 class="categories__title">
         Browse Bose
         <br>
         products by category
@@ -107,7 +114,7 @@
     </section>
 
     <section class="how-to-buy" id="how-to-buy">
-      <h2 class="how-to-buy__header">
+      <h2 class="how-to-buy__title">
         Why buy direct
         <br>
         from Bose
