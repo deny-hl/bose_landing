@@ -202,7 +202,7 @@ body {
 }
 
 .photo-wide{
-  width: 65%px;
+  width: 65%;
 }
 
 .photo-square {
@@ -256,4 +256,147 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (max-width: 1199px) {
+  .header {
+    padding: 48px 72px;
+    height: 80vh;
+    background-position: right center;
+  }
+
+  .header__title {
+    font-size: 40px;
+    letter-spacing: -1px;
+    margin-top: 32px;
+  }
+
+  .top-bar {
+    padding: 48px 72px;
+    margin-bottom: 72px;
+  }
+
+  .main {
+    padding: 72px;
+  }
+
+  .recommended__title,
+  .categories__title,
+  .how-to-buy__title {
+    font-size: 40px;
+  }
+
+  .recommended__products {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .product {
+    flex-basis: 280px;
+  }
+
+  .categories {
+    min-width: 744px;
+    margin-bottom: 96px;
+  }
+
+  .category__photos {
+    gap: 2%;
+  }
+
+  .how-to-buy {
+    gap: 20px;
+    min-width: 744px;
+  }
+}
+
+@media (max-width: 743px) {
+  html { font-size: 15px; }
+
+  .header {
+    height: auto;
+    padding: 32px 20px 56px;
+    background-position: 70% 0;
+  }
+
+  .header__top { align-items: center; }
+
+  .logo { width: 84px; height: auto; }
+
+  .header__title {
+    font-size: 32px;
+    margin-top: 24px;
+    letter-spacing: -0.8px;
+  }
+
+  .header__bottom img {
+    width: 56px;
+    height: auto;
+  }
+
+  .top-bar {
+    padding: 24px 20px;
+    margin-bottom: 32px;
+  }
+
+  .menu__content {
+    padding-inline: 20px;
+  }
+
+  .main {
+    padding: 56px 20px;
+  }
+
+  .recommended { margin-bottom: 80px; }
+
+  .recommended__title { margin-bottom: 40px; font-size: 32px; }
+
+  .recommended__products {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .product { flex-basis: auto; }
+
+  .categories { margin-bottom: 80px; }
+
+  .categories__title { 
+    margin-top: 56px;
+    margin-bottom: 32px;
+    font-size: 32px;
+  }
+
+  .category__photos {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .category__photos img,
+  .photo-wide,
+  .photo-square {
+    width: 100%;
+  }
+
+  .how-to-buy {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 16px;
+  }
+
+  .how-to-buy__title {
+    margin: 0 0 16px 0;
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .how-to-buy__content { flex-basis: auto; }
+
+  .how-to-buy__benefits { margin-bottom: 24px; }
+
+}
+
+@media (max-width: 360px) {
+  .header__title { font-size: 28px;}
+  
 }
