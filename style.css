@@ -258,7 +258,7 @@ body {
   background-size: cover;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 744px) {
   .header {
     padding: 48px 72px;
     height: 80vh;
@@ -276,6 +276,10 @@ body {
     margin-bottom: 72px;
   }
 
+  .menu__content {
+    padding-inline: 72px;
+  }
+
   .main {
     padding: 72px;
   }
@@ -287,7 +291,6 @@ body {
   }
 
   .recommended__products {
-    flex-wrap: wrap;
     gap: 24px;
   }
 
@@ -296,7 +299,7 @@ body {
   }
 
   .categories {
-    min-width: 744px;
+    max-width: 100%;
     margin-bottom: 96px;
   }
 
@@ -306,27 +309,37 @@ body {
 
   .how-to-buy {
     gap: 20px;
-    min-width: 744px;
+    max-width: 100%;
   }
 }
 
-@media (max-width: 743px) {
-  html { font-size: 15px; }
+/* MOBILE BREAKPOINT - 320px (Figma design) */
+@media (max-width: 320px) {
+  html { 
+    font-size: 15px; 
+  }
 
   .header {
     height: auto;
+    min-height: 100vh;
     padding: 32px 20px 56px;
     background-position: 70% 0;
   }
 
-  .header__top { align-items: center; }
+  .header__top { 
+    align-items: center; 
+  }
 
-  .logo { width: 84px; height: auto; }
+  .logo { 
+    width: 84px; 
+    height: auto; 
+  }
 
   .header__title {
     font-size: 32px;
     margin-top: 24px;
     letter-spacing: -0.8px;
+    line-height: 110%;
   }
 
   .header__bottom img {
@@ -343,28 +356,47 @@ body {
     padding-inline: 20px;
   }
 
+  .nav__link {
+    font-size: 20px;
+    min-height: 48px;
+  }
+
   .main {
     padding: 56px 20px;
   }
 
-  .recommended { margin-bottom: 80px; }
+  .recommended { 
+    margin-bottom: 80px; 
+  }
 
-  .recommended__title { margin-bottom: 40px; font-size: 32px; }
+  .recommended__title { 
+    margin-bottom: 40px; 
+    font-size: 32px; 
+  }
 
   .recommended__products {
     flex-direction: column;
     align-items: stretch;
-    gap: 24px;
+    gap: 32px;
   }
 
-  .product { flex-basis: auto; }
+  .product { 
+    flex-basis: auto;
+    max-width: 100%;
+  }
 
-  .categories { margin-bottom: 80px; }
+  .categories { 
+    margin-bottom: 80px; 
+  }
 
   .categories__title { 
     margin-top: 56px;
     margin-bottom: 32px;
     font-size: 32px;
+  }
+
+  .category {
+    margin-bottom: 48px;
   }
 
   .category__photos {
@@ -390,13 +422,96 @@ body {
     font-size: 28px;
   }
 
-  .how-to-buy__content { flex-basis: auto; }
+  .how-to-buy__content { 
+    flex-basis: auto; 
+  }
 
-  .how-to-buy__benefits { margin-bottom: 24px; }
-
+  .how-to-buy__benefits { 
+    margin-bottom: 24px; 
+    gap: 12px;
+  }
 }
 
-@media (max-width: 360px) {
-  .header__title { font-size: 28px;}
+/* ADDITIONAL BREAKPOINT FOR IPHONE 15 PRO AND SIMILAR (393px) */
+@media (min-width: 321px) and (max-width: 430px) {
+  .header {
+    padding: 28px 24px 48px;
+    background-position: 65% 0;
+  }
+
+  .header__title {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: -0.7px;
+  }
+
+  .top-bar {
+    padding: 28px 24px;
+    margin-bottom: 28px;
+  }
+
+  .menu__content {
+    padding-inline: 24px;
+  }
+
+  .main {
+    padding: 48px 24px;
+  }
+
+  .recommended__title,
+  .categories__title {
+    font-size: 30px;
+    margin-bottom: 36px;
+  }
+
+  .categories__title {
+    margin-top: 48px;
+  }
+
+  .recommended__products {
+    gap: 28px;
+  }
+
+  .how-to-buy__title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+}
+
+/* LANDSCAPE ORIENTATION FOR MOBILE */
+@media (max-height: 500px) and (orientation: landscape) {
+  .header {
+    height: auto;
+    min-height: auto;
+    padding: 20px 24px;
+  }
+
+  .header__title {
+    font-size: 24px;
+    margin-top: 12px;
+  }
+
+  .menu {
+    overflow-y: auto;
+  }
+}
+
+/* VERY SMALL SCREENS */
+@media (max-width: 280px) {
+  .header__title { 
+    font-size: 24px;
+  }
   
+  .recommended__title,
+  .categories__title {
+    font-size: 28px;
+  }
+
+  .how-to-buy__title {
+    font-size: 24px;
+  }
+
+  .main {
+    padding: 40px 16px;
+  }
 }
