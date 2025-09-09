@@ -13,7 +13,6 @@ body {
   line-height: 140%;
 }
 /* #endregion */
-
 /* #region header */
 .header {
   display: flex;
@@ -26,6 +25,20 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 64px 72px;
+    background-image: url(./images/header-bg-small.png);
+  }
+}
+
+  @media (max-width: 576px) {
+  .header {
+    padding: 32px 20px;
+    background-position: 0 0;
+  }
 }
 
 .header__top {
@@ -42,8 +55,18 @@ body {
   font-style: italic;
   letter-spacing: -1.5px;
 }
-/* #endregion */
 
+@media (max-width: 1024px) {
+  .header__title {
+    font-size: 40px;
+  }
+}
+  @media (max-width: 576px) {
+  .header__title {
+    font-size: 32px;
+  }
+}
+/* #endregion */
 /* #region top-bar */
 .top-bar {
   display: flex;
@@ -58,7 +81,6 @@ body {
   display: flex;
 }
 /* #endregion */
-
 /* #region icons */
 .icon {
   display: block;
@@ -69,7 +91,6 @@ body {
   background-image: url(./images/icons/icon-close.png);
 }
 /* #endregion */
-
 /* #region menu */
 .menu {
   position: fixed;
@@ -82,6 +103,18 @@ body {
   height: 100vh;
   background-color: #E8EFF9;
   text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    padding: 64px 72px;
+  }
+}
+
+  @media (max-width: 576px) {
+  .menu {
+    padding: 32px 20px;
+  }
 }
 
 .menu:target {
@@ -101,7 +134,6 @@ body {
   padding-inline: 120px;
 }
 /* #endregion */
-
 /* #region link/list */
 .nav__link {
   color: #292929;
@@ -121,11 +153,24 @@ body {
   gap: 32px;
 }
 /* #endregion */
-
+/* #region main */
 .main {
   padding: 120px;
   background-color: #fff;
 }
+
+@media (max-width: 1024px) {
+  .main {
+    padding: 120px 72px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main {
+    padding: 120px 20px;
+  }
+}
+/* #endregion */
 /* #region recommended */
 .recommended {
   margin-bottom: 120px;
@@ -145,6 +190,20 @@ body {
   display: flex;
   justify-content: center;
   gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .recommended__products {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .recommended__products {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 .product {
@@ -173,7 +232,6 @@ body {
   font-weight: bold;
 }
 /* #endregion */
-
 /* #region categories */
 .categories {
   max-width: 1020px;
@@ -201,19 +259,30 @@ body {
   margin-bottom: 64px;
 }
 
-.photo-wide{
+.photo-wide {
   width: 65%;
+  object-fit: cover;
 }
 
 .photo-square {
   width: 32%;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .photo-wide {
+    width: 48,5%;
+  }
+
+  .photo-square {
+    width: 48.5%;
+  }
 }
 
 .category__title {
   margin: 0;
 }
 /* #endregion */
-
 /* #region how-to-buy */
 .how-to-buy {
   display: flex;
@@ -221,6 +290,13 @@ body {
   max-width: 1020px;
   margin: 0 auto;
 }
+
+@media (max-width: 576px) {
+  .how-to-buy {
+    display: block;
+  }
+}
+
 .how-to-buy__title {
   flex-basis: 50%;
   margin-top: 120px;
@@ -229,6 +305,12 @@ body {
   line-height: 100%;
   font-weight: 700;
   letter-spacing: -1.5px;
+}
+
+@media (max-width: 576px) {
+  .how-to-buy__title {
+    font-size: 32px;
+  }
 }
 
 .how-to-buy__content {
@@ -246,7 +328,7 @@ body {
   font-weight: bold;
 }
 /* #endregion */
-
+/* #region footer */
 .footer {
   position: sticky;
   bottom: 0;
@@ -257,261 +339,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* #endregion */
 
-@media (max-width: 744px) {
-  .header {
-    padding: 48px 72px;
-    height: 80vh;
-    background-position: right center;
-  }
-
-  .header__title {
-    font-size: 40px;
-    letter-spacing: -1px;
-    margin-top: 32px;
-  }
-
-  .top-bar {
-    padding: 48px 72px;
-    margin-bottom: 72px;
-  }
-
-  .menu__content {
-    padding-inline: 72px;
-  }
-
-  .main {
-    padding: 72px;
-  }
-
-  .recommended__title,
-  .categories__title,
-  .how-to-buy__title {
-    font-size: 40px;
-  }
-
-  .recommended__products {
-    gap: 24px;
-  }
-
-  .product {
-    flex-basis: 280px;
-  }
-
-  .categories {
-    max-width: 100%;
-    margin-bottom: 96px;
-  }
-
-  .category__photos {
-    gap: 2%;
-  }
-
-  .how-to-buy {
-    gap: 20px;
-    max-width: 100%;
-  }
-}
-
-/* MOBILE BREAKPOINT - 320px (Figma design) */
-@media (max-width: 320px) {
-  html { 
-    font-size: 15px; 
-  }
-
-  .header {
-    height: auto;
-    min-height: 100vh;
-    padding: 32px 20px 56px;
-    background-position: 70% 0;
-  }
-
-  .header__top { 
-    align-items: center; 
-  }
-
-  .logo { 
-    width: 84px; 
-    height: auto; 
-  }
-
-  .header__title {
-    font-size: 32px;
-    margin-top: 24px;
-    letter-spacing: -0.8px;
-    line-height: 110%;
-  }
-
-  .header__bottom img {
-    width: 56px;
-    height: auto;
-  }
-
-  .top-bar {
-    padding: 24px 20px;
-    margin-bottom: 32px;
-  }
-
-  .menu__content {
-    padding-inline: 20px;
-  }
-
-  .nav__link {
-    font-size: 20px;
-    min-height: 48px;
-  }
-
-  .main {
-    padding: 56px 20px;
-  }
-
-  .recommended { 
-    margin-bottom: 80px; 
-  }
-
-  .recommended__title { 
-    margin-bottom: 40px; 
-    font-size: 32px; 
-  }
-
-  .recommended__products {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 32px;
-  }
-
-  .product { 
-    flex-basis: auto;
-    max-width: 100%;
-  }
-
-  .categories { 
-    margin-bottom: 80px; 
-  }
-
-  .categories__title { 
-    margin-top: 56px;
-    margin-bottom: 32px;
-    font-size: 32px;
-  }
-
-  .category {
-    margin-bottom: 48px;
-  }
-
-  .category__photos {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .category__photos img,
-  .photo-wide,
-  .photo-square {
-    width: 100%;
-  }
-
-  .how-to-buy {
-    flex-direction: column;
-    max-width: 100%;
-    gap: 16px;
-  }
-
-  .how-to-buy__title {
-    margin: 0 0 16px 0;
-    text-align: center;
-    font-size: 28px;
-  }
-
-  .how-to-buy__content { 
-    flex-basis: auto; 
-  }
-
-  .how-to-buy__benefits { 
-    margin-bottom: 24px; 
-    gap: 12px;
-  }
-}
-
-/* ADDITIONAL BREAKPOINT FOR IPHONE 15 PRO AND SIMILAR (393px) */
-@media (min-width: 321px) and (max-width: 430px) {
-  .header {
-    padding: 28px 24px 48px;
-    background-position: 65% 0;
-  }
-
-  .header__title {
-    font-size: 30px;
-    margin-top: 20px;
-    letter-spacing: -0.7px;
-  }
-
-  .top-bar {
-    padding: 28px 24px;
-    margin-bottom: 28px;
-  }
-
-  .menu__content {
-    padding-inline: 24px;
-  }
-
-  .main {
-    padding: 48px 24px;
-  }
-
-  .recommended__title,
-  .categories__title {
-    font-size: 30px;
-    margin-bottom: 36px;
-  }
-
-  .categories__title {
-    margin-top: 48px;
-  }
-
-  .recommended__products {
-    gap: 28px;
-  }
-
-  .how-to-buy__title {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
-}
-
-/* LANDSCAPE ORIENTATION FOR MOBILE */
-@media (max-height: 500px) and (orientation: landscape) {
-  .header {
-    height: auto;
-    min-height: auto;
-    padding: 20px 24px;
-  }
-
-  .header__title {
-    font-size: 24px;
-    margin-top: 12px;
-  }
-
-  .menu {
-    overflow-y: auto;
-  }
-}
-
-/* VERY SMALL SCREENS */
-@media (max-width: 280px) {
-  .header__title { 
-    font-size: 24px;
-  }
-  
-  .recommended__title,
-  .categories__title {
-    font-size: 28px;
-  }
-
-  .how-to-buy__title {
-    font-size: 24px;
-  }
-
-  .main {
-    padding: 40px 16px;
+@media (max-width: 576px) {
+  .logo {
+    height: 16px;
   }
 }
